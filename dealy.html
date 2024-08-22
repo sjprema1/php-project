@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head> delay timings</head>
+<body>
+<button onclick ="start()" id ="bt1">start</button>
+<h1 id="op">Some Text</h1>
+<button onclick ="stop()" id ="bt1">stop</button>
+
+<script type ="text/javascript">
+    var ID =0;
+    var seconds =0;
+
+    function printMsg(){
+        document.getElementById("op").innerHTML =seconds+"seconds have passed";
+        seconds++;
+    }
+
+    function start(){
+        Id = window.setTimeout(printMsg,5000)
+        Id = window.setInterval(printMsg,1000)
+    }
+    function stop(){
+        window.clearTimeout(Id)
+        window.clearInterval(Id)
+    }
+</script>
+</body>
